@@ -1,0 +1,50 @@
+﻿@model Лабораторная_11.Models.Сотрудник2
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Новый сотрудник - 2-ая форма</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Шифр, "Шифр")
+        <br />
+        @Html.EditorFor(model => model.Шифр)
+        <br /><br />
+        @Html.LabelFor(model => model.Должность, "Должность")
+        <br />
+        @Html.EditorFor(model => model.Должность)
+        <br /><br />
+        @Html.LabelFor(model => model.Размер_ставки, "Размер ставки")
+        <br />
+        @Html.EditorFor(model => model.Размер_ставки)
+        <br /><br />
+        @Html.LabelFor(model => model.Дата_принятия, "Дата принятия")
+        <br />
+        @Html.EditorFor(model => model.Дата_принятия)
+        <br /><br />
+        @Html.LabelFor(model => model.Дата_увольнения, "Дата увольнения")
+        <br />
+        @Html.EditorFor(model => model.Дата_увольнения)
+        <br /><br />
+        @Html.LabelFor(model => model.Уволен, "Уволен")
+        <br />
+        @Html.EditorFor(model => model.Уволен)
+        <br /><br />
+        @Html.LabelFor(model => model.Причина_увольнения, "Причина увольнения")
+        <br />
+        @Html.EditorFor(model => model.Причина_увольнения)
+        <br /><br />
+        @Html.LabelFor(model => model.Год, "Год")
+        <br />
+        @Html.EditorFor(model => model.Год)
+        <br /><br />
+        @Html.LabelFor(model => model.Месяц, "Месяц")
+        <br />
+        @Html.EditorFor(model => model.Месяц)
+        <br /><br />
+        @Html.LabelFor(model => model.Зарплата, "Зарплата")
+        <br />
+        @Html.EditorFor(model => model.Зарплата)
+        <br /><br />
+        <p><input type="submit" value="Добавить" /></p>
+    }

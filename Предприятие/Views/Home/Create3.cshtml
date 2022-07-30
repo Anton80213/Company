@@ -1,0 +1,20 @@
+﻿@model Лабораторная_11.Models.Должность
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новая должность - 3-я форма</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Название, "Название")
+    <br />
+    @Html.EditorFor(model => model.Название)
+    <br /><br />
+    @Html.LabelFor(model => model.Базовый_оклад, "Базовый оклад")
+    <br />
+    @Html.EditorFor(model => model.Базовый_оклад)
+    <br /><br />
+    <p><input type="submit" value="Добавить" /></p>
+}
+

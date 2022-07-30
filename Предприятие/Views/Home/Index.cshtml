@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Предприятие</title>
+</head>
+<body>
+    <div>
+        <h3>Таблица "Сотрудники"</h3>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Шифр</th>
+                <th>ФИО</th>
+                <th>Дата рождения</th>
+                <th>Пол</th>
+            </tr>
+            @foreach (var a in Model.сотрудники)
+            {
+                <tr>
+                    <td>@a.Шифр</td>
+                    <td>@a.ФИО</td>
+                    <td>@a.Дата_рождения</td>
+                    <td>@a.Пол</td>
+                </tr>
+            }
+        </table>
+        <h3>Таблица "Сотрудники2"</h3>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Шифр</th>
+                <th>Должность</th>
+                <th>Размер ставки</th>
+                <th>Дата принятия</th>
+                <th>Дата увольнения</th>
+                <th>Уволен</th>
+                <th>Причина увольнения</th>
+                <th>Год</th>
+                <th>Месяц</th>
+                <th>Зарплата</th>
+            </tr>
+            @foreach (var b in Model.сотрудники2)
+            {
+                <tr>
+                    <td>@b.Шифр</td>
+                    <td>@b.Должность</td>
+                    <td>@b.Размер_ставки</td>
+                    <td>@b.Дата_принятия</td>
+                    <td>@b.Дата_увольнения</td>
+                    <td>@b.Уволен</td>
+                    <td>@b.Причина_увольнения</td>
+                    <td>@b.Год</td>
+                    <td>@b.Месяц</td>
+                    <td>@b.Зарплата</td>
+                </tr>
+            }
+        </table>
+        <h3>Таблица должностей</h3>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Название</th>
+                <th>Базовый оклад</th>
+            </tr>
+            @foreach (var c in Model.должности)
+            {
+                <tr>
+                    <td>@c.Название</td>
+                    <td>@c.Базовый_оклад</td>
+                </tr>
+            }
+        </table>
+        <p><a href="/Home/Create">Переход к 1-ой форме</a></p>
+        <p><a href="/Home/Create2">Переход ко 2-ой форме</a></p>
+        <p><a href="/Home/Create3">Переход к 3-ей форме</a></p>
+        <p><a href="/Home/Выборка_данных1">Переход к форме запроса 1</a></p>
+        <p><a href="/Home/Выборка_данных2">Переход к форме запроса 2</a></p>
+        <p><a href="/Home/Выборка_данных3">Переход к форме запроса 3</a></p>
+        <p><a href="/Home/Выборка_данных4">Переход к форме запроса 4</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model Лабораторная_11.Models.Сотрудник
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новый сотрудник - 1-ая форма</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Шифр, "Шифр")
+        <br />
+        @Html.EditorFor(model => model.Шифр)
+        <br /><br />
+        @Html.LabelFor(model => model.ФИО, "ФИО")
+        <br />
+        @Html.EditorFor(model => model.ФИО)
+        <br /><br />
+        @Html.LabelFor(model => model.Дата_рождения, "Дата рождения")
+        <br />
+        @Html.EditorFor(model => model.Дата_рождения)
+        <br /><br />
+        @Html.LabelFor(model => model.Пол, "Пол")
+        <br />
+        @Html.EditorFor(model => model.Пол)
+        <br /><br />
+        <p><input type="submit" value="Добавить" /></p>
+    }

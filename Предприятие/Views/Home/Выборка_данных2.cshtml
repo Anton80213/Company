@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Лабораторная_11.Models.Model1>
+
+<h2>Результат 2-го запроса</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            Шифр
+        </th>
+        <th>
+            Должность
+        </th>
+        <th>
+            Зарплата
+        </th>
+        <th>
+            Дата принятия
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Шифр
+            </td>
+            <td>
+                @item.Должность
+            </td>
+            <td>
+                @item.Зарплата
+            </td>
+            <td>
+                @item.Дата_принятия
+            </td>
+        </tr>
+    }
+</table>
